@@ -17,3 +17,13 @@ callouts:
 aux_links:
   "View the repo on GitHub":
     - https://github.com/lmedeiros9/delivery-docs
+
+logo: "/assets/images/logo.png"
+
+footer_content: "Maintained by the Delivery team. Last updated by crew."
+
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/lmedeiros9/YOUR-REPO-NAME"
+gh_edit_branch: "main"
+gh_edit_view_mode: "tree"
