@@ -2,7 +2,7 @@
 title: "1 | Administration"
 nav_order: 2
 has_children: true
-permalink: /1-crew/
+permalink: /1-administration/
 ---
 
 # 1 | Administration
