@@ -2,7 +2,7 @@
 title: "4 | Logistics"
 nav_order: 5
 has_children: true
-permalink: /4-resources/
+permalink: /4-logistics/
 ---
 
 # 4 | Logistics
