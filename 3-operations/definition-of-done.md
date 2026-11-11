@@ -25,3 +25,10 @@ A piece of work is done when:
 
 > Check with the Client Lead before marking anything done on a client account.
 {: .note }
+
+> Run the Maker-Checker review in a sandbox first. It catches most issues before UAT.
+{: .tip }
+
+> Never deploy to production without a second reviewer.
+{: .warning }
+
