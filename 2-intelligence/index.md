@@ -2,7 +2,7 @@
 title: "2 | Intelligence"
 nav_order: 3
 has_children: true
-permalink: /2-intake-risk/
+permalink: /2-intelligence/
 ---
 
 # 2 | Intelligence
