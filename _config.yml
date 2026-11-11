@@ -12,7 +12,7 @@ back_to_top_text: "Back to top"
 callouts:
   note:
     title: Note
-    color: green
+    color: blue
 
 defaults:
   - scope:
