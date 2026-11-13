@@ -29,14 +29,14 @@ defaults:
       layout: default
 
 aux_links:
-  "View the repo on GitHub":
-    - https://github.com/lmedeiros9/delivery-docs
+  "Crew Login":
+    - https://clientcloudcare.my.salesforce.com/
 
 logo: "/assets/images/logo.png"
 
-footer_content: "Maintained by the Delivery team. Last updated by crew."
+footer_content: "Maintained by the Delivery Director. Last updated 11-12-2026."
 
-gh_edit_link: true
+gh_edit_link: false
 gh_edit_link_text: "Edit this page on GitHub"
 gh_edit_repository: "https://github.com/lmedeiros9/YOUR-REPO-NAME"
 gh_edit_branch: "main"
