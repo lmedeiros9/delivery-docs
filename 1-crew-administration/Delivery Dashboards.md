@@ -1,10 +1,10 @@
 # Delivery Dashboards Playbook
 
-Nov 23, 2026 · @Lindsay Medeiros
+Nov 23, 2026
 
 ## Overview
 
-Three Salesforce dashboards answer the core delivery questions: are our people loaded right, are clients getting what they pay for, and is the work moving with quality. All three run as Lindsay Medeiros and refresh on open (click Refresh for live numbers). They currently sit in Lindsay's Private Dashboards folder and move to a shared Delivery folder once an admin creates it.
+Three Salesforce dashboards answer the core delivery questions: are our people loaded right, are clients getting what they pay for, and is the work moving with quality. All three run as  and refresh on open (click Refresh for live numbers). They currently sit in Director of Delivery's Private Dashboards folder and move to a shared Delivery folder once an admin creates it.
 
 | Dashboard | Question it answers | Primary audience | Link |
 | --- | --- | --- | --- |
@@ -20,9 +20,9 @@ Three Salesforce dashboards answer the core delivery questions: are our people l
 
 ## Delivery – People v2
 
-Answers: is each crew member on pace for their utilization goal, how much work is planned for the next three months, and where do we have room — or a need — to hire.
+Answers: is each crew member on pace for their utilization goal, how much work is planned for the next three months, and where do we have room - or a need - to hire.
 
-**Scope:** active billable crew. Courtney Schmidt, Wendy DeCesare, Nicole DeMartine and Mary Crozier are excluded (they don't bill clients). "Cloudcare Admin" is treated as unassigned work, not a person.
+**Scope:** active billable crew. Operations staff are excluded (they don't bill clients). "Cloudcare Admin" is treated as unassigned work, not a person.
 
 | Component | What it shows | How to read it |
 | --- | --- | --- |
@@ -35,8 +35,6 @@ Answers: is each crew member on pace for their utilization goal, how much work i
 | Open Capacity vs Goal (Hiring View) | Goal hours minus planned hours, stacked by person per month | Below zero = over-planned. Consistently small or negative totals = case for hiring. |
 | Capacity, Goal & 90-Day Avg Hours | Per person: capacity, goal hours, rolling 90-day average hours | 90-day average includes internal work; shows sustained load. |
 | Actual Client Hours by Person | Client hours by work date, last 6 months | Trend of who is delivering client work. |
-
-**Baseline (23 Nov 2026):** crew at 92% of goal pace; 394 billable hours vs 429 goal to date; 146.5 unassigned planned hours over three months. Nicole Hall is planned at 133–137% of goal and Lauren Greeno at 117% in December, while most others have open capacity in Dec–Jan.
 
 ## Delivery – Clients v2
 
@@ -59,8 +57,6 @@ Answers: are Managed Service clients using the hours they pay for, who is over b
 | Clients Over Hours (table) | Monthly and block hours remaining for over-budget projects | Negative = hours over. |
 | Renewals & Expirations ≤ 90 Days | Days left per project | Negative = already expired. |
 | CSAT Surveys Overdue | Active clients never surveyed or > 180 days since survey | 0 days = never surveyed. |
-
-**Baseline (23 Nov 2026):** 506 contracted MS hours/month, 79% used at 77% of month elapsed. ILAO, Hutchcraft, Casa Familiar and NextOp were above 90% used. 5 projects over hours (Russian Riverkeeper −60.5 monthly, Landmark −34.8 block). 5 renewals within 90 days; UT Health expired 10 Nov but is still active. Average CSAT 4.78 across 9 scored clients; 18 active clients overdue for a survey.
 
 ## Delivery – Work
 
@@ -89,13 +85,11 @@ Answers: what work is waiting or stuck, whether maker-checker review is happenin
 
 Follow-up reports not on the dashboard: **DBv2W\_Missing Fields Detail** (per-line fix-it list), **DBv2W\_Unowned or Inactive Owner**, **DBv2W\_Checker Required - Not Covered** (full list).
 
-**Baseline (23 Nov 2026):** 245 open items, 31 past due (11 for Jane Stilling), 42 stalled. Of 31 checker-required lines completed in 30 days, 22 (71%) had no checker or waiver; none of the 7 lines in Internal Review has a checker assigned. 38% of lines complete within 30 days; average 155 days. Lines past Backlog are 58% complete on core fields (Lauren Greeno 86%, Jane Stilling and Jalisha Sumler 44%); 119 lack internal docs and 89 lack sub-tasks.
-
 ## Definitions and business rules
 
 | Term | Definition | Source in Salesforce |
 | --- | --- | --- |
-| Utilization goal | Chris Oliver 25%, Lindsay Medeiros 60%, all other crew 90% of monthly capacity | Hardcoded in report formulas (no field) |
+| Utilization goal | Director of Client Success 25%, Director of Delivery 60%, all other crew 90% of monthly capacity | Hardcoded in report formulas (no field) |
 | Goal hours | Capacity/month × utilization goal | Resource: Capacity/month |
 | Goal hours to date | Goal hours × (day of month ÷ days in month) | Calendar days, not working days |
 | Billable hours | Hours logged to non-Cloudcare clients this month | Resource: Billable Hours this Month |
@@ -126,7 +120,7 @@ These are constraints of current fields and access, not errors. Read the affecte
 
 ## Maintenance
 
-**Where things live.** Reports are in Lindsay's private reports folder: "DBv2\_" prefix for People and Clients, "DBv2W\_" for Work. The original "Delivery – People" and "Delivery – Clients" dashboards are untouched and can be retired once v2 is adopted. Build scripts live in the C2HQ Prod project under scripts/dashboards; rerunning them rebuilds every report and dashboard from one definition.
+**Where things live.** Reports are in Director of Delivery's private reports folder: "DBv2\_" prefix for People and Clients, "DBv2W\_" for Work. The original "Delivery – People" and "Delivery – Clients" dashboards are untouched and can be retired once v2 is adopted. Build scripts live in the C2HQ Prod project under scripts/dashboards; rerunning them rebuilds every report and dashboard from one definition.
 
 **Common changes**
 
@@ -141,6 +135,6 @@ These are constraints of current fields and access, not errors. Read the affecte
 
 - [ ] Ask admin for a shared "Delivery" dashboard folder with view access for leadership; move all three dashboards there.
 - [ ] Ask admin to merge the duplicate "Not Started" status values.
-- [ ] Optional, when fields are allowed: a utilization-goal field on Resource, "has internal docs" / "has sub-tasks" checkboxes, and status-change date stamps.
+- [ ] Suggested reporting improvements - Optional, when HQ updates are allowed: a utilization-goal field on Resource, "has internal docs" / "has sub-tasks" checkboxes, and status-change date stamps.
 - [ ] Optional, access: read on project line fields in time-entry report types, to enable estimate vs actual.
 - [ ] Retire the original dashboards and their reports after v2 adoption.
